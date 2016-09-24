@@ -1,0 +1,11 @@
+consul:
+  image: consul:v0.7.0
+  command: "consul agent -server -bootstrap-expect 1 -data-dir /consul/data -config-dir /consul/config -ui -client 0.0.0.0"
+  ports:
+    - "8500:8500" # web GUI
+  environment:
+    - GOMAXPROCS=10
+    - 'CONSUL_LOCAL_CONFIG={"skip_leave_on_interrupt": true}'
+  restart: always
+  hostname: consul
+
