@@ -12,7 +12,7 @@
 
 3. (In separate terminal) Add a key with keyprefix /foo:
   ````
-  $ ./add-key.sh
+  $ ./set-key.sh
   ````
 
 The changes should now being reported by the consul watcher still running in the previous terminal.
